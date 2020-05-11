@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Дмитрий Смирнов](https://up.htmlacademy.ru/htmlcss/28/user/1320239).
-* Наставник: [Иван Мулярчик](https://htmlacademy.ru/profile/ivanmuliarchyk).
+* Наставник: `Иван Мулярчик`.
 
 ---
 
