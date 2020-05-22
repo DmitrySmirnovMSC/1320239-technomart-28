@@ -12,25 +12,36 @@
   <header class="main-header">
     <!-- Верхняя секция шапки -->
     <section class="main-header-top">
-      <a href="#"><img src="#" alt="Логотип"></a>
-      <form class="search" action="#" method="get">
-        <input type="search">
-      </form>
-      <a href="#" class="marks">Закладки:<span class="marks-count">0</span></a>
-      <a href="#" class="cart">Корзина:<span class="cart-count">0</span></a>
-      <a href="#" class="order-button">Оформить заказ</a>
+      <a href="#"><img src="img\common_img\logos and icons\logo-header.png" alt="Логотип компании" width="220px" height="47px"></a>
+      <div class="search">
+        <img src="img\common_img\logos and icons\icon-search.svg" alt="Иконка Поиск" width="17px" height="17px">
+        <form class="search-form" action="#" method="get">
+          <input type="search">
+        </form>
+      </div>
+      <div class="marks">
+        <img src="img\common_img\logos and icons\icon-bookmark.svg" alt="Иконка Закладка" width="14px" height="16px">
+        <a href="#" class="marks-link">Закладки:<span class="marks-count">0</span></a>
+      </div>
+      <div class="cart">
+        <img src="img\common_img\logos and icons\icon-cart.svg" alt="Иконка Закладка" width="15px" height="15px">
+        <a href="#" class="cart-link">Корзина:<span class="cart-count">0</span></a>
+      </div>
+      <div class="order">
+        <a href="#" class="order-link">Оформить заказ</a>
+      </div>
     </section>
     <!-- Средняя секция шапки -->
     <section class="main-header-middle">
       <h1>Интернет магазин строительных материалов и инструментов для ремонта</h1>
       <div class="telefon">
-        <img src="#" alt="Значок телефонной трубки">
+        <img src="img\common_img\logos and icons\icon-phone.svg" alt="Иконка Телефонная трубка" width="19px" height="19px">
         <p>+7 (812) 555-05-55</p>
       </div>
       <p class="addres">г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</p>
       <div class="authorization">
         <div class="enter">
-          <img src="#" alt="Иконка входа">
+          <img src="img\index_img\logos and icons\icon-login.svg" alt="Иконка входа" width="20px" height="17px">
           <a href="#">Войти</a>
         </div>
         <div class="registration">
@@ -56,16 +67,26 @@
 
   <!-- Основное содержание -->
   <main>
-
     <!-- заголовок скрыт -->
     <h2 class="visually-hidden">О компании, продукция, сервисы и доставка</h2>
     <!-- Главная секция Продукция, скидки и доставка -->
     <section class="product-info">
       <!-- заголовок скрыт -->
       <h2 class="visually-hidden">Информация о проудкции</h2>
-      <div class="demonstration">
-        <h3>Перфораторы</h3>
-        <a href="#">Открыть каталог</a>
+      <div class="slider">
+        <ul class="slider-list">
+          <li class="slider-list-item">
+            <h3>Перфораторы</h3>
+            <p>Настоящие мужские игрушки</p>
+            <img src="#" alt="Фото рабочего с перфоратором" width="#" height="#">
+          </li>
+          <li class="slider-list-item">
+            <h3>Дрели</h3>
+            <p>Соседям на радость!</p>
+            <img src="#" alt="Фото рабочего с дрелью" width="#" height="#">
+          </li>
+        </ul>
+        <a href="catalog.html">Открыть каталог</a>
       </div>
       <div class="material">
         <h3>Материалы</h3>
@@ -176,7 +197,6 @@
         <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
       </div>
     </section>
-
     <!-- Секция О компании -->
     <section class="about">
       <!-- заголовок скрыт -->
@@ -197,10 +217,10 @@
       </article>
       <article class="about-contacts">
         <h3>Контакты</h3>
-        <div>
-          <p>Вы можете забрать товар сами, заехав в наш офис</p>
-        </div>
-        <a href="#"><img src="#" alt="Карта"></a>
+        <p>Вы можете забрать товар сами, заехав в наш офис</p>
+        <a href="#">
+          <img src="img\index_img\pictures\map.png" alt="Расположение офиса на карте" width="300px" height="158px">
+        </a>
         <a href="#">Заблудились? Напишите нам!</a>
       </article>
     </section>
@@ -210,7 +230,7 @@
   <footer class="main-footer">
     <!-- Верхняя секция подвала -->
     <section class="main-footer-top">
-      <img src="#" alt="Логотип">
+      <img src="img\common_img\logos and icons\logo-footer.png" alt="Логотип компании" width="220px" height="68px">
       <div>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         <p>+7 (812) 555-05-55</p>
@@ -237,13 +257,13 @@
       </div>
       <ul class="social-network-list">
         <li class="social-network-list-item">
-          <a href="#"><img src="#" alt="Vkontakte"></a>
+          <a href="#"><img src="img\common_img\logos and icons\icon-vk.svg" alt="Vkontakte" width="44px" height="44px"></a>
         </li>
         <li class="social-network-list-item">
-          <a href="#"><img src="#" alt="Facebook"></a>
+          <a href="#"><img src="img\common_img\logos and icons\icon-fb.svg" alt="Facebook" width="44px" height="44px"></a>
         </li>
         <li class="social-network-list-item">
-          <a href="#"><img src="#" alt="Instagram"></a>
+          <a href="#"><img src="img\common_img\logos and icons\icon-insta.svg" alt="Instagram" width="44px" height="44px"></a>
         </li>
       </ul>
       <div class="feedback">

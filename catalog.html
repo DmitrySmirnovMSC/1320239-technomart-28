@@ -12,27 +12,38 @@
   <header class="main-header">
     <!-- Верхняя секция шапки -->
     <section class="main-header-top">
-      <a href="index.html"><img src="#" alt="Логотип"></a>
-      <form class="search" action="#" method="get">
-        <input type="search">
-      </form>
-      <a href="#" class="marks">Закладки:<span class="marks-count">0</span></a>
-      <a href="#" class="cart">Корзина:<span class="cart-count">0</span></a>
-      <a href="#" class="order-button">Оформить заказ</a>
+      <a href="index.html"><img src="img\common_img\logos and icons\logo-header.png" alt="Логотип компании" width="220px" height="47px"></a>
+      <div class="search">
+        <img src="img\common_img\logos and icons\icon-search.svg" alt="Иконка Поиск" width="17px" height="17px">
+        <form class="search-form" action="#" method="get">
+          <input type="search">
+        </form>
+      </div>
+      <div class="marks">
+        <img src="img\common_img\logos and icons\icon-bookmark.svg" alt="Иконка Закладка" width="14px" height="16px">
+        <a href="#" class="marks-link">Закладки:<span class="marks-count">0</span></a>
+      </div>
+      <div class="cart">
+        <img src="img\common_img\logos and icons\icon-cart.svg" alt="Иконка Закладка" width="15px" height="15px">
+        <a href="#" class="cart-link">Корзина:<span class="cart-count">0</span></a>
+      </div>
+      <div class="order">
+        <a href="#" class="order-link">Оформить заказ</a>
+      </div>
     </section>
     <!-- Средняя секция шапки -->
     <section class="main-header-middle">
       <p class="definition"></p>
       <div class="telefon">
-        <img src="#" alt="Значок телефонной трубки">
+        <img src="img\common_img\logos and icons\icon-phone.svg" alt="Иконка Телефонная трубка" width="19px" height="19px">
         <p>+7 (812) 555-05-55</p>
       </div>
       <p class="addres">г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</p>
       <div class="authorization">
         <div>
-          <a href="#"><img src="#" alt="Иконка пользователя"></a>
+          <a href="#"><img src="img\catalog_img\logos and icons\icon-user.svg" alt="Иконка Пользователь" width="20px" height="18px"></a>
           <a href="#">Равшан Джамшутович</a>
-          <a href="#"><img src="#" alt="Иконка выхода"></a>
+          <a href="#"><img src="img\catalog_img\logos and icons\icon-logout.svg" alt="Иконка Выход" width="20px" height="17px"></a>
         </div>
         <ul>
           <li><a href="#">Мои заказы</a></li>
@@ -59,18 +70,18 @@
   <main>
     <ul class="catalog-navigation">
       <li class="catalog-navigation-home">
-        <a href="#"><img src="#" alt="Иконка"></a>
+        <a href="#"><img src="img\catalog_img\logos and icons\icon-home.svg" alt="Иконка Домой" width="14px" height="12px"></a>
       </li>
       <li class="catalog-navigation-item">
-        <img src="#" alt="Иконка">
+        <img src="img\catalog_img\logos and icons\icon-right-small.svg" alt="Иконка Стрелка вправо" width="8px" height="12px">
         <a href="#">Каталог</a>
       </li>
       <li class="catalog-navigation-item">
-        <img src="#" alt="Иконка">
+        <img src="img\catalog_img\logos and icons\icon-right-small.svg" alt="Иконка Стрелка вправо" width="8px" height="12px">
         <a href="#">Инструмент</a>
       </li>
       <li class="catalog-navigation-item">
-        <img src="#" alt="Иконка">
+        <img src="img\catalog_img\logos and icons\icon-right-small.svg" alt="Иконка Стрелка вправо" width="8px" height="12px">
         <a href="#">Перфораторы</a>
       </li>
     </ul>
@@ -80,41 +91,44 @@
         <h2>Фильтр:</h2>
       </div>
       <form class="filter-form" action="#" method="post">
+        <!--
         <fieldset class="filter-form-price">
           <input type="range" name="range-price-in" id="range-price-in" min="0" max="30000" step="1">
           <label for="range-price-in">Цена:</label>
           <output name="range-price-out-min"></output>
           <output name="range-price-out-max"></output>
         </fieldset>
+        -->
         <fieldset class="filter-form-producer">
           <label>
-                        <input type="checkbox" name="producer-select" value="Bosch" checked>Bosch
-                    </label>
+            <input type="checkbox" name="producer-select" value="Bosch" checked>Bosch
+          </label>
           <label>
-                        <input type="checkbox" name="producer-select" value="Интерскол">Интерскол
-                    </label>
+            <input type="checkbox" name="producer-select" value="Интерскол">Интерскол
+          </label>
           <label>
-                        <input type="checkbox" name="producer-select" value="Makita" checked>Makita
-                    </label>
+            <input type="checkbox" name="producer-select" value="Makita" checked>Makita
+          </label>
           <label>
-                        <input type="checkbox" name="producer-select" value="Dewalt">Dewalt
-                    </label>
+            <input type="checkbox" name="producer-select" value="Dewalt">Dewalt
+          </label>
           <label>
-                        <input type="checkbox" name="producer-select" value="Hitachi">Hitachi
-                    </label>
+            <input type="checkbox" name="producer-select" value="Hitachi">Hitachi
+          </label>
         </fieldset>
         <fieldset class="filter-form-power">
           <label>
-                        <input type="radio" name="power-select" value="accumulator" checked>Аккумуляторные
-                    </label>
+            <input type="radio" name="power-select" value="accumulator" checked>Аккумуляторные
+          </label>
           <label>
-                        <input type="radio" name="power-select" value="electric-network">Сетевые
-                    </label>
+            <input type="radio" name="power-select" value="electric-network">Сетевые
+          </label>
         </fieldset>
         <button class="filter-result">Показать</button>
       </form>
     </section>
     <section class="sort-and-showing">
+      <!-- 
       <div class="sort">
         <h2>Сортировка</h2>
         <form class="sort-form" action="#" method="post">
@@ -125,70 +139,77 @@
           <button></button>
         </form>
       </div>
+      -->
       <div class="showing">
         <ul class="showing-list">
           <li class="showing-list-item">
-            <img src="#" alt="фото товара">
+            <img src="img\catalog_img\pictures\bosch_bfg_6000.jpg" alt="Фото Перфоратор BOSCH BFG 6000" width="144px" height="128px">
             <p>Перфоратор BOSCH BFG 6000</p>
             <p>30500 Р.</p>
             <a href="#">25500 Р.</a>
           </li>
           <li class="showing-list-item">
-            <img src="#" alt="фото товара">
+            <img src="img\catalog_img\pictures\bosch_bfg_6000.jpg" alt="Фото Перфоратор BOSCH BFG 6000" width="144px" height="128px">
             <p>Перфоратор BOSCH BFG 6000</p>
             <p>30500 Р.</p>
             <a href="#">25500 Р.</a>
           </li>
           <li class="showing-list-item">
-            <img src="#" alt="фото товара">
+            <button class="buy">
+              <img src="img\common_img\logos and icons\icon-cart.svg" alt="Иконка Корзина" width="15px" height="15px">
+              <p>Купить</p>
+            </button>
+            <button class="mark-in">В закладки</button>
             <p>Перфоратор BOSCH BFG 6000</p>
             <p>30500 Р.</p>
             <a href="#">25500 Р.</a>
           </li>
           <li class="showing-list-item">
-            <img src="#" alt="фото товара">
+            <img src="img\catalog_img\pictures\bosch_bfg_3000.jpg" alt="Фото Перфоратор BOSCH BFG 3000" width="127px" height="112px">
             <p>Перфоратор BOSCH BFG 3000</p>
             <p>22500 Р.</p>
             <a href="#">15500 Р.</a>
           </li>
           <li class="showing-list-item">
-            <img src="#" alt="фото товара">
+            <img src="img\catalog_img\pictures\bosch_bfg_6000.jpg" alt="Фото Перфоратор BOSCH BFG 6000" width="144px" height="128px">
             <p>Перфоратор BOSCH BFG 6000</p>
             <p>30500 Р.</p>
             <a href="#">25500 Р.</a>
           </li>
           <li class="showing-list-item">
-            <img src="#" alt="фото товара">
+            <img src="img\catalog_img\pictures\bosch_bfg_2000.jpg" alt="Фото Перфоратор BOSCH BFG 2000" width="127px" height="112px">
             <p>Перфоратор BOSCH BFG 2000</p>
             <p></p>
             <a href="#">12500 Р.</a>
           </li>
           <li class="showing-list-item">
-            <img src="#" alt="фото товара">
+            <img src="img\catalog_img\pictures\bosch_bfg_3000.jpg" alt="Фото Перфоратор BOSCH BFG 3000" width="127px" height="112px">
             <p>Перфоратор BOSCH BFG 3000</p>
             <p>22500 Р.</p>
             <a href="#">15500 Р.</a>
           </li>
           <li class="showing-list-item">
-            <img src="#" alt="фото товара">
+            <img src="img\catalog_img\pictures\bosch_bfg_6000.jpg" alt="Фото Перфоратор BOSCH BFG 6000" width="144px" height="128px">
             <p>Перфоратор BOSCH BFG 6000</p>
             <p>30500 Р.</p>
             <a href="#">25500 Р.</a>
           </li>
           <li class="showing-list-item">
-            <img src="#" alt="фото товара">
+            <img src="img\catalog_img\pictures\bosch_bfg_2000.jpg" alt="Фото Перфоратор BOSCH BFG 2000" width="127px" height="112px">
             <p>Перфоратор BOSCH BFG 2000</p>
             <p></p>
             <a href="#">12500 Р.</a>
           </li>
         </ul>
       </div>
+      <!--
       <form class="paging" action="#" method="post">
         <button></button>
         <button></button>
         <button></button>
         <button></button>
       </form>
+      -->
     </section>
     <article class="add-info">
       <h2>Пара слов о перфораторах</h2>
@@ -201,7 +222,7 @@
   <footer class="main-footer">
     <!-- Верхняя секция подвала -->
     <section class="main-footer-top">
-      <img src="#" alt="Логотип">
+      <img src="img\common_img\logos and icons\logo-footer.png" alt="Логотип компании" width="220px" height="68px">
       <div>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         <p>+7 (812) 555-05-55</p>
@@ -228,13 +249,13 @@
       </div>
       <ul class="social-network-list">
         <li class="social-network-list-item">
-          <a href="#"><img src="#" alt="Vkontakte"></a>
+          <a href="#"><img src="img\common_img\logos and icons\icon-vk.svg" alt="Vkontakte" width="44px" height="44px"></a>
         </li>
         <li class="social-network-list-item">
-          <a href="#"><img src="#" alt="Facebook"></a>
+          <a href="#"><img src="img\common_img\logos and icons\icon-fb.svg" alt="Facebook" width="44px" height="44px"></a>
         </li>
         <li class="social-network-list-item">
-          <a href="#"><img src="#" alt="Instagram"></a>
+          <a href="#"><img src="img\common_img\logos and icons\icon-insta.svg" alt="Instagram" width="44px" height="44px"></a>
         </li>
       </ul>
       <div class="feedback">
