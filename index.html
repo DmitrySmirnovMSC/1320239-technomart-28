@@ -100,16 +100,12 @@
             <img src="img/index_img/pictures/worker_and_drill.jpg" alt="Рабочий с дрелью в руках сверлит отверстие в стене" width="620" height="266">
           </li>
         </ul>
-        <p class="slide-left">
-          <button>
-            <img src="img/index_img/icons/icon_left.svg" alt="Пролистать назад" width="22" height="40">
-          </button>
-        </p>
-        <p class="slide-right">
-          <button>
-            <img src="img/index_img/icons/icon_right.svg" alt="Пролистать вперед" width="22" height="40">
-          </button>
-        </p>
+        <button type="button" name="slide-back" class="button-slide-back">
+          <img src="img/index_img/icons/icon_left.svg" alt="Пролистать назад" width="22" height="40">
+        </button>
+        <button type="button" name="slide-ahead" class="button-slide-ahead">
+          <img src="img/index_img/icons/icon_right.svg" alt="Пролистать вперед" width="22" height="40">
+        </button>
         <a href="catalog.html">Открыть каталог</a>
       </div>
       <div class="material">
@@ -276,11 +272,11 @@
       <article class="about-contacts">
         <h3>Контакты</h3>
         <p>Вы можете забрать товар сами, заехав в наш офис</p>
-        <button type="button" name="map-click" value="map-click" class="map-click-before">
+        <button type="button" name="map-click" class="map-click-before">
           <img src="img/index_img/pictures/map_little.png" alt="Расположение офиса на карте" width="300" height="158">
         </button>
         <!-- Всплывающая карта после нажатия размечена после футера -->
-        <button type="button" name="callback-click" value="callback-click" class="callback-click">Заблудились? Напишите нам!</button>
+        <button type="button" name="callback-click" class="callback-click">Заблудились? Напишите нам!</button>
         <!-- Всплывающая форма обратной связи размечена после футера -->
       </article>
     </section>
@@ -360,7 +356,7 @@
       </p>
     </form>
     <button type="submit" name="send-message" class="send-message" aria-label="Отправить сообщение">Отправить</button>
-    <button type="button" name="button-callback-close" value="button-callback-close" onclick="#" class="button-callback-close">
+    <button type="button" name="button-callback-close" class="button-callback-close">
       <img src="img/common_img/icons/icon-close.svg" alt="Закрыть окно" width="21" height="21">
     </button>
   </div>
@@ -368,7 +364,7 @@
   <!-- Всплывающая карта после нажатия -->
   <div class="map-click-after">
     <img src="img/index_img/pictures/map_big.png" alt="Расположение офиса на карте" width="1736" height="779">
-    <button type="button" name="button-map-close" value="button-map-close" onclick="#" class="button-map-close">
+    <button type="button" name="button-map-close" class="button-map-close">
       <img src="img/common_img/icons/icon-close.svg" alt="Закрыть карту" width="21" height="21">
     </button>
   </div>
