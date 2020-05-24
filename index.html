@@ -12,22 +12,30 @@
   <header class="main-header">
     <!-- Верхняя секция шапки -->
     <section class="main-header-top">
+      <!-- Заголовок скрыт -->
+      <h2 class="visually-hidden">Информационная панель сайта Техномарт</h2>
       <a href="#">
         <p class="logo-techno-header">Техномарт</p>
       </a>
       <div class="search">
         <img src="img/common_img/icons/icon_search.svg" alt="Поиск" width="17" height="17">
-        <form class="search-form" action="#" method="get">
-          <input type="search">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <input type="search" name="search" placeholder="Поиск">
         </form>
       </div>
       <div class="marks">
-        <img src="img/common_img/icons/icon_bookmark.svg" alt="Закладка" width="14" height="16">
-        <a href="#" class="marks-link">Закладки:<span class="marks-count">0</span></a>
+        <a href="#" class="marks-link">
+          <img src="img/common_img/icons/icon_bookmark.svg" alt="Закладка" width="14" height="16">
+          <span class="marks-name">Закладки:</span>
+          <span class="marks-count">0</span>
+        </a>
       </div>
       <div class="cart">
-        <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
-        <a href="#" class="cart-link">Корзина:<span class="cart-count">0</span></a>
+        <a href="#" class="cart-link">
+          <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
+          <span class="cart-name">Корзина:</span>
+          <span class="cart-count">0</span>
+        </a>
       </div>
       <div class="order">
         <a href="#" class="order-link">Оформить заказ</a>
@@ -43,8 +51,10 @@
       <p class="addres">г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</p>
       <div class="authorization">
         <div class="enter">
-          <img src="img/index_img/icons/icon_login.svg" alt="Войти" width="20" height="17">
-          <a href="#">Войти</a>
+          <a href="#">
+            <img src="img/index_img/icons/icon_login.svg" alt="Войти" width="20" height="17">
+            <span>Войти</span>
+          </a>
         </div>
         <div class="registration">
           <a href="#">Регистрация</a>
@@ -53,6 +63,8 @@
     </section>
     <!-- Нижняя секция шапки -->
     <section class="main-header-bottom">
+      <!-- Заголовок скрыт -->
+      <h2 class="visually-hidden">Навигационное меню сайта Техномарт</h2>
       <nav class="main-navigation">
         <ul>
           <li><a href="#">Главная</a></li>
@@ -264,10 +276,16 @@
       <article class="about-contacts">
         <h3>Контакты</h3>
         <p>Вы можете забрать товар сами, заехав в наш офис</p>
-        <a href="#">
-          <img src="img/index_img/pictures/map.png" alt="Расположение офиса на карте" width="300" height="158">
-        </a>
-        <a href="#">Заблудились? Напишите нам!</a>
+        <form class="location-and-callback" action="https://echo.htmlacademy.ru" method="post">
+          <button type="button" name="map-click" value="map-click" class="map-click-before">
+            <img src="img/index_img/pictures/map_little.png" alt="Расположение офиса на карте" width="300" height="158">
+          </button>
+          <!-- Всплывающая карта после нажатия размечена после футера -->
+          <button type="button" name="callback-click" value="callback-click" class="callback-click">
+            <span>Заблудились? Напишите нам!</span>
+          </button>
+          <!-- Всплывающая форма обратной связи размечена после футера -->
+        </form>
       </article>
     </section>
   </main>
@@ -276,19 +294,23 @@
   <footer class="main-footer">
     <!-- Верхняя секция подвала -->
     <section class="main-footer-top">
-      <p class="logo-techno-footer">Техномарт</p>
-      <div>
+      <!-- Заголовок скрыт -->
+      <h2 class="visually-hidden">Адрес компании и навигационная панель сайта Техномарт</h2>
+      <div class="logo-techno-footer">
+        <p>Техномарт</p>
+      </div>
+      <div class="address-and-telefon">
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         <p>+7 (812) 555-05-55</p>
       </div>
-      <ul class="navigation-minor-part-one">
+      <ul class="secondary-navigation-part-one">
         <li><a href="#">Компания</a></li>
         <li><a href="#">Новости</a></li>
         <li><a href="#">Каталог</a></li>
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
-      <ul class="navigation-minor-part-two">
+      <ul class="secondary-navigation-part-two">
         <li><a href="#">Материалы</a></li>
         <li><a href="#">Техника</a></li>
         <li><a href="#">Инструмент</a></li>
@@ -297,6 +319,8 @@
     </section>
     <!-- Нижняя секция подвала -->
     <section class="main-footer-bottom">
+      <!-- Заголовок скрыт -->
+      <h2 class="visually-hidden">Обратная связь с нами, ссылки на социальные сети</h2>
       <div>
         <p>© 2010–2019 Компания «Техномарт»</p>
         <p>Все права защищены</p>
@@ -322,6 +346,36 @@
       </div>
     </section>
   </footer>
+
+  <!-- Всплывающая форма обратной связи -->
+  <div class="callback-block">
+    <form class="callback-form" action="https://echo.htmlacademy.ru" method="get">
+      <label>
+        <span>Ваше имя:</span>
+        <input type="text" name="callback-user-name" placeholder="Имя Фамилия" required>
+      </label>
+      <label>
+        <span>Ваш e-mail:</span>
+        <input type="email" name="callback-user-email" placeholder="email@example.com" required>
+      </label>
+      <label>
+        <span>Текст письма:</span>
+        <textarea name="callback-text" placeholder="В свободной форме" required></textarea>
+      </label>
+    </form>
+    <button type="button" name="button-callback-close" value="button-callback-close" onclick="#" class="button-callback-close">
+      <img src="img/common_img/icons/icon-close.svg" alt="Закрыть окно" width="21" height="21">
+    </button>
+  </div>
+
+
+  <!-- Всплывающая карта после нажатия -->
+  <div class="map-click-after">
+    <img src="img/index_img/pictures/map_big.png" alt="Расположение офиса на карте" width="1736" height="779">
+    <button type="button" name="button-map-close" value="button-map-close" onclick="#" class="button-map-close">
+      <img src="img/common_img/icons/icon-close.svg" alt="Закрыть карту" width="21" height="21">
+    </button>
+  </div>
 
 </body>
 
