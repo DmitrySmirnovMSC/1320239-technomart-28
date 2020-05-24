@@ -131,39 +131,43 @@
         </fieldset>
         <fieldset class="filter-form-producer">
           <legend>Производители:</legend>
-          <label>
-            <input type="checkbox" name="producer-select" value="Bosch" checked>
-            <span>Bosch</span>
-          </label>
-          <label>
-            <input type="checkbox" name="producer-select" value="Интерскол">
-            <span>Интерскол</span>
-          </label>
-          <label>
-            <input type="checkbox" name="producer-select" value="Makita" checked>
-            <span>Makita</span>
-          </label>
-          <label>
-            <input type="checkbox" name="producer-select" value="Dewalt">
-            <span>Dewalt</span>
-          </label>
-          <label>
-            <input type="checkbox" name="producer-select" value="Hitachi">
-            <span>Hitachi</span>
-          </label>
+          <ul class="filter-form-producer-list">
+            <li>
+              <input type="checkbox" name="producer-select" id="producer-select-bosch" value="Bosch" checked>
+              <label for="producer-select-bosch">Bosch</label>
+            </li>
+            <li>
+              <input type="checkbox" name="producer-select" id="producer-select-interskol" value="Интерскол">
+              <label for="producer-select-interskol">Интерскол</label>
+            </li>
+            <li>
+              <input type="checkbox" name="producer-select" id="producer-select-makita" value="Makita" checked>
+              <label for="producer-select-makita">Makita</label>
+            </li>
+            <li>
+              <input type="checkbox" name="producer-select" id="producer-select-dewalt" value="Dewalt">
+              <label for="producer-select-dewalt">Dewalt</label>
+            </li>
+            <li>
+              <input type="checkbox" name="producer-select" id="producer-select-hitachi" value="Hitachi">
+              <label for="producer-select-hitachi">Hitachi</label>
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="filter-form-power">
           <legend>Питание:</legend>
-          <label>
-            <input type="radio" name="power-select" value="accumulator" checked>
-            <span>Аккумуляторные</span>
-          </label>
-          <label>
-            <input type="radio" name="power-select" value="electric-network">
-            <span>Сетевые</span>
-          </label>
+          <ul class="filter-form-power-list">
+            <li>
+              <input type="radio" name="power-select" id="power-select-accumulator" value="accumulator" checked>
+              <label for="power-select-accumulator">Аккумуляторные</label>
+            </li>
+            <li>
+              <input type="radio" name="power-select" id="power-select-electric-network" value="electric-network">
+              <label for="power-select-electric-network">Сетевые</label>
+            </li>
+          </ul>
         </fieldset>
-        <button class="filter-result">Показать</button>
+        <button type="submit" name="filter-result" class="filter-result">Показать</button>
       </form>
     </section>
     <!-- Панель сортировки и область представления карточки товаров -->
@@ -252,9 +256,7 @@
               <span>Купить</span>
             </button>
             <!-- Всплывающая форма после нажатия кнопки КУПИТЬ размечена после футера  -->
-            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">
-              <span>В закладки</span>
-            </button>
+            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">В закладки</button>
             <p>Перфоратор BOSCH BFG 6000</p>
             <p>30500 Р.</p>
             <a href="#">25500 Р.</a>
@@ -265,23 +267,7 @@
               <span>Купить</span>
             </button>
             <!-- Всплывающая форма после нажатия кнопки КУПИТЬ размечена после футера  -->
-            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">
-              <span>В закладки</span>
-            </button>
-            <p>Перфоратор BOSCH BFG 6000</p>
-            <p>30500 Р.</p>
-            <a href="#">25500 Р.</a>
-          </li>
-          <li class="showing-list-hover-item">
-            <img src="img/common_img/decorations/sticker_new.svg" alt="Новый товар" width="70" height="70">
-            <button type="button" name="buy-item" value="buy-item" class="buy-item">
-              <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
-              <span>Купить</span>
-            </button>
-            <!-- Всплывающая форма после нажатия кнопки КУПИТЬ размечена после футера  -->
-            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">
-              <span>В закладки</span>
-            </button>
+            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">В закладки</button>
             <p>Перфоратор BOSCH BFG 6000</p>
             <p>30500 Р.</p>
             <a href="#">25500 Р.</a>
@@ -293,9 +279,19 @@
               <span>Купить</span>
             </button>
             <!-- Всплывающая форма после нажатия кнопки КУПИТЬ размечена после футера  -->
-            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">
-              <span>В закладки</span>
+            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">В закладки</button>
+            <p>Перфоратор BOSCH BFG 6000</p>
+            <p>30500 Р.</p>
+            <a href="#">25500 Р.</a>
+          </li>
+          <li class="showing-list-hover-item">
+            <img src="img/common_img/decorations/sticker_new.svg" alt="Новый товар" width="70" height="70">
+            <button type="button" name="buy-item" value="buy-item" class="buy-item">
+              <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
+              <span>Купить</span>
             </button>
+            <!-- Всплывающая форма после нажатия кнопки КУПИТЬ размечена после футера  -->
+            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">В закладки</button>
             <p>Перфоратор BOSCH BFG 3000</p>
             <p>22500 Р.</p>
             <a href="#">15500 Р.</a>
@@ -306,9 +302,7 @@
               <span>Купить</span>
             </button>
             <!-- Всплывающая форма после нажатия кнопки КУПИТЬ размечена после футера  -->
-            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">
-              <span>В закладки</span>
-            </button>
+            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">В закладки</button>
             <p>Перфоратор BOSCH BFG 6000</p>
             <p>30500 Р.</p>
             <a href="#">25500 Р.</a>
@@ -320,9 +314,7 @@
               <span>Купить</span>
             </button>
             <!-- Всплывающая форма после нажатия кнопки КУПИТЬ размечена после футера  -->
-            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">
-              <span>В закладки</span>
-            </button>
+            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">В закладки</button>
             <p>Перфоратор BOSCH BFG 2000</p>
             <p></p>
             <a href="#">12500 Р.</a>
@@ -334,9 +326,7 @@
               <span>Купить</span>
             </button>
             <!-- Всплывающая форма после нажатия кнопки КУПИТЬ размечена после футера  -->
-            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">
-              <span>В закладки</span>
-            </button>
+            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">В закладки</button>
             <p>Перфоратор BOSCH BFG 3000</p>
             <p>22500 Р.</p>
             <a href="#">15500 Р.</a>
@@ -347,9 +337,7 @@
               <span>Купить</span>
             </button>
             <!-- Всплывающая форма после нажатия кнопки КУПИТЬ размечена после футера  -->
-            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">
-              <span>В закладки</span>
-            </button>
+            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">В закладки</button>
             <p>Перфоратор BOSCH BFG 6000</p>
             <p>30500 Р.</p>
             <a href="#">25500 Р.</a>
@@ -361,9 +349,7 @@
               <span>Купить</span>
             </button>
             <!-- Всплывающая форма после нажатия кнопки КУПИТЬ размечена после футера  -->
-            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">
-              <span>В закладки</span>
-            </button>
+            <button type="button" name="mark-in-item" value="mark-in-item" class="mark-in-item">В закладки</button>
             <p>Перфоратор BOSCH BFG 2000</p>
             <p></p>
             <a href="#">12500 Р.</a>
@@ -453,9 +439,7 @@
     <div class="buy-item-form-order">
       <a href="#">Оформить заказ</a>
     </div>
-    <button type="button" name="button-buy-item-form-continue" value="button-buy-item-form-continue" onclick="#" class="button-buy-item-form-continue">
-      <span>Продолжить покупки</span>
-    </button>
+    <button type="button" name="button-buy-item-form-continue" value="button-buy-item-form-continue" onclick="#" class="button-buy-item-form-continue">Продолжить покупки</button>
     <button type="button" name="button-buy-item-form-close" value="button-buy-item-form-close" aria-label="Закрыть это окно" onclick="#" class="button-buy-item-form-close">
       <img src="img/common_img/icons/icon-close.svg" alt="Закрыть" width="21" height="21">
     </button>

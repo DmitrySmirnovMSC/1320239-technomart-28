@@ -276,16 +276,12 @@
       <article class="about-contacts">
         <h3>Контакты</h3>
         <p>Вы можете забрать товар сами, заехав в наш офис</p>
-        <form class="location-and-callback" action="https://echo.htmlacademy.ru" method="post">
-          <button type="button" name="map-click" value="map-click" class="map-click-before">
-            <img src="img/index_img/pictures/map_little.png" alt="Расположение офиса на карте" width="300" height="158">
-          </button>
-          <!-- Всплывающая карта после нажатия размечена после футера -->
-          <button type="button" name="callback-click" value="callback-click" class="callback-click">
-            <span>Заблудились? Напишите нам!</span>
-          </button>
-          <!-- Всплывающая форма обратной связи размечена после футера -->
-        </form>
+        <button type="button" name="map-click" value="map-click" class="map-click-before">
+          <img src="img/index_img/pictures/map_little.png" alt="Расположение офиса на карте" width="300" height="158">
+        </button>
+        <!-- Всплывающая карта после нажатия размечена после футера -->
+        <button type="button" name="callback-click" value="callback-click" class="callback-click">Заблудились? Напишите нам!</button>
+        <!-- Всплывающая форма обратной связи размечена после футера -->
       </article>
     </section>
   </main>
@@ -350,24 +346,24 @@
   <!-- Всплывающая форма обратной связи -->
   <div class="callback-block">
     <form class="callback-form" action="https://echo.htmlacademy.ru" method="get">
-      <label>
-        <span>Ваше имя:</span>
-        <input type="text" name="callback-user-name" placeholder="Имя Фамилия" required>
-      </label>
-      <label>
-        <span>Ваш e-mail:</span>
-        <input type="email" name="callback-user-email" placeholder="email@example.com" required>
-      </label>
-      <label>
-        <span>Текст письма:</span>
-        <textarea name="callback-text" placeholder="В свободной форме" required></textarea>
-      </label>
+      <p>
+        <input type="text" name="callback-user-name" value="callback-user-name" id="appointment-callback-user-name" placeholder="Имя Фамилия" required>
+        <label for="appointment-callback-user-name">Ваше имя:</label>
+      </p>
+      <p>
+        <input type="email" name="callback-user-email" value="callback-user-email" id="appointment-callback-user-email" placeholder="email@example.com" required>
+        <label for="appointment-callback-user-email"></label>
+      </p>
+      <p>
+        <textarea name="callback-text" id="appointment-callback-text" placeholder="В свободной форме" required></textarea>
+        <label for="appointment-callback-text">Текст письма:</label>
+      </p>
     </form>
+    <button type="submit" name="send-message" class="send-message" aria-label="Отправить сообщение">Отправить</button>
     <button type="button" name="button-callback-close" value="button-callback-close" onclick="#" class="button-callback-close">
       <img src="img/common_img/icons/icon-close.svg" alt="Закрыть окно" width="21" height="21">
     </button>
   </div>
-
 
   <!-- Всплывающая карта после нажатия -->
   <div class="map-click-after">
