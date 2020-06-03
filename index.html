@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Техномарт</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="normalize.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -15,7 +18,7 @@
       <!-- Заголовок скрыт -->
       <h2 class="visually-hidden">Информационная панель сайта Техномарт</h2>
       <a href="#">
-        <p class="logo-techno-header">Техномарт</p>
+        <div class="technomart-logo-header"></div>
       </a>
       <div class="search">
         <img src="img/common_img/icons/icon_search.svg" alt="Поиск" width="17" height="17">
@@ -30,7 +33,7 @@
           <span class="marks-count">0</span>
         </a>
       </div>
-      <div class="cart">
+      <div class="cart cart-index">
         <a href="#" class="cart-link">
           <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
           <span class="cart-name">Корзина:</span>
@@ -68,7 +71,7 @@
       <nav class="main-navigation">
         <ul>
           <li><a href="#">Главная</a></li>
-          <li><a href="#">Компания</a></li>
+          <li><a href="catalog.html">Компания</a></li>
           <li><a href="#">Каталог</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="#">Спецпредложения</a></li>
@@ -80,7 +83,7 @@
   </header>
 
   <!-- Основное содержание -->
-  <main>
+  <main class="main-index">
     <!-- заголовок скрыт -->
     <h2 class="visually-hidden">О компании, продукция, сервисы и доставка</h2>
     <!-- Главная секция Продукция, скидки и доставка -->
@@ -108,28 +111,28 @@
         </button>
         <a href="catalog.html">Открыть каталог</a>
       </div>
-      <div class="material">
+      <div class="product-info-item material">
         <h3>Материалы</h3>
         <a href="#">На любой вкус</a>
         <img src="img/index_img/icons/icon_material.svg" alt="Емкость с краской" width="44" height="65">
         <img src="img/common_img/decorations/sticker_new.svg" alt="Новый товар" width="70" height="70">
       </div>
-      <div class="instrument">
+      <div class="product-info-item instrument">
         <h3>Инструмент</h3>
         <a href="#">На все случаи</a>
         <img src="img/index_img/icons/icon_instrument.svg" alt="Дрель" width="75" height="61">
       </div>
-      <div class="technic">
+      <div class="product-info-item technic">
         <h3>Техника</h3>
         <a href="#">Для стройки</a>
         <img src="img/index_img/icons/icon_technic.svg" alt="Спецтехника" width="78" height="62">
       </div>
-      <div class="discount">
+      <div class="product-info-item discount">
         <h3>Скидки 50%</h3>
         <a href="#">На 350 товаров</a>
         <img src="img/index_img/icons/icon_discount.svg" alt="Тележка с товарами" width="59" height="72">
       </div>
-      <div class="delivery">
+      <div class="product-info-item delivery">
         <h3>Доставка</h3>
         <a href="#">Бесплатно</a>
         <img src="img/index_img/icons/icon_delivery.svg" alt="Грузовой автомобиль" width="78" height="63">
@@ -220,9 +223,7 @@
     <!-- Секция Сервисы -->
     <section class="services">
       <h2>Сервисы</h2>
-      <div>
-        <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-      </div>
+      <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
       <ul class="services-menu-list">
         <li class="services-menu-list-delivery">
           <a href="#">Доставка</a>
@@ -234,17 +235,17 @@
           <a href="#">Кредит</a>
         </li>
       </ul>
-      <div class="services-menu-info-delivery">
+      <div class="services-menu-info services-menu-info-delivery">
         <h3>Доставка</h3>
         <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
         <img src="img/index_img/icons/icon_lorry.png" alt="Грузовой автомобиль" width="468" height="261">
       </div>
-      <div class="services-menu-info-guarantee">
+      <div class="services-menu-info services-menu-info-guarantee">
         <h3>Гарантия</h3>
         <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
         <img src="img/index_img/icons/icon_guarantee.png" alt="Гарантийный знак" width="389" height="283">
       </div>
-      <div class="services-menu-info-credit">
+      <div class="services-menu-info services-menu-info-credit">
         <h3>Кредит</h3>
         <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
         <img src="img/index_img/icons/icon_credit.png" alt="Деньги и график платежей" width="465" height="285">
@@ -263,9 +264,9 @@
           </p>
         </div>
         <ul class="transport-list">
-          <li><a href="#">Деловые линии</a></li>
-          <li><a href="#">Автотрейдинг</a></li>
-          <li><a href="#">ЖелДорЭкспедиция</a></li>
+          <li>Деловые линии</li>
+          <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
         </ul>
         <a href="#">Подробнее о компании</a>
       </article>
@@ -289,7 +290,7 @@
       <!-- Заголовок скрыт -->
       <h2 class="visually-hidden">Адрес компании и навигационная панель сайта Техномарт</h2>
       <div class="logo-techno-footer">
-        <p>Техномарт</p>
+        <img src="img/common_img/logos/logo_technomart_footer.png" alt="Логотип Техномарт" width="220" height="68">
       </div>
       <div class="address-and-telefon">
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -313,19 +314,19 @@
     <section class="main-footer-bottom">
       <!-- Заголовок скрыт -->
       <h2 class="visually-hidden">Обратная связь с нами, ссылки на социальные сети</h2>
-      <div>
+      <div class="copyright">
         <p>© 2010–2019 Компания «Техномарт»</p>
         <p>Все права защищены</p>
       </div>
       <ul class="social-network-list">
-        <li class="social-network-list-item">
-          <a href="#"><img src="img/common_img/icons/icon_vk.svg" alt="Вконтакте" width="44" height="44"></a>
+        <li>
+          <a href="#"><img src="img/common_img/icons/icon_vk.svg" alt="Вконтакте" width="25" height="14"></a>
         </li>
-        <li class="social-network-list-item">
-          <a href="#"><img src="img/common_img/icons/icon_fb.svg" alt="Facebook" width="44" height="44"></a>
+        <li>
+          <a href="#"><img src="img/common_img/icons/icon_fb.svg" alt="Facebook" width="12" height="22"></a>
         </li>
-        <li class="social-network-list-item">
-          <a href="#"><img src="img/common_img/icons/icon_insta.svg" alt="Instagram" width="44" height="44"></a>
+        <li>
+          <a href="#"><img src="img/common_img/icons/icon_insta.svg" alt="Instagram" width="21" height="21"></a>
         </li>
       </ul>
       <div class="feedback">
@@ -357,7 +358,7 @@
       <button type="submit" name="send-message" class="send-message" aria-label="Отправить сообщение">Отправить</button>
     </form>
     <button type="button" name="button-callback-close" class="button-callback-close">
-      <img src="img/common_img/icons/icon-close.svg" alt="Закрыть окно" width="21" height="21">
+      <img src="img/common_img/icons/icon_close.svg" alt="Закрыть окно" width="21" height="21">
     </button>
   </div>
 
@@ -365,7 +366,7 @@
   <div class="map-click-after">
     <img src="img/index_img/pictures/map_big.png" alt="Расположение офиса на карте" width="1736" height="779">
     <button type="button" name="button-map-close" class="button-map-close">
-      <img src="img/common_img/icons/icon-close.svg" alt="Закрыть карту" width="21" height="21">
+      <img src="img/common_img/icons/icon_close.svg" alt="Закрыть карту" width="21" height="21">
     </button>
   </div>
 
