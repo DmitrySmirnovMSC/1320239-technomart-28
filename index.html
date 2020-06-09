@@ -283,7 +283,7 @@
             <img src="img/index_img/pictures/map_little.png" alt="Расположение офиса на карте" width="300" height="158">
           </button>
           <!-- Всплывающая карта после нажатия размечена после футера -->
-          <button type="button" name="callback-click">Заблудились? Напишите нам!</button>
+          <a class="callback-click" href="#callback-block-modal">Заблудились? Напишите нам!</a>
           <!-- Всплывающая форма обратной связи размечена после футера -->
         </article>
       </div>
@@ -352,28 +352,30 @@
   </footer>
 
   <!-- Всплывающая форма обратной связи -->
-  <div class="callback-block">
-    <p class="callback-block-decoration"></p>
-    <button type="button" name="button-callback-close">
-      <img src="img/common_img/icons/icon_close.svg" alt="Закрыть окно" width="21" height="21">
-      </button>
-    <form class="callback-form" action="https://echo.htmlacademy.ru" method="get">
-      <p>
-        <label for="appointment-callback-user-name">Ваше имя:</label>
-        <input type="text" name="callback-user-name" id="appointment-callback-user-name" placeholder="Имя Фамилия" required>
-      </p>
-      <p>
-        <label for="appointment-callback-user-email">Ваш e-mail:</label>
-        <input type="email" name="callback-user-email" id="appointment-callback-user-email" placeholder="email@example.com" required>
-      </p>
-      <p>
-        <label for="appointment-callback-text">Текст письма:</label>
-        <textarea name="callback-text" id="appointment-callback-text" placeholder="В свободной форме" required></textarea>
-      </p>
-      <p>
-        <button type="submit" name="send-message" aria-label="Отправить сообщение">Отправить</button>
-      </p>
-    </form>
+  <div class="callback-container" id="callback-block-modal">
+    <div class="callback-block">
+      <p class="callback-block-decoration"></p>
+      <a class="button-callback-close" href="#">
+        <img src="img/common_img/icons/icon_close.svg" alt="Закрыть окно" width="21" height="21">
+      </a>
+      <form class="callback-form" action="https://echo.htmlacademy.ru" method="get">
+        <p>
+          <label for="appointment-callback-user-name">Ваше имя:</label>
+          <input type="text" name="callback-user-name" id="appointment-callback-user-name" placeholder="Имя Фамилия" required>
+        </p>
+        <p>
+          <label for="appointment-callback-user-email">Ваш e-mail:</label>
+          <input type="email" name="callback-user-email" id="appointment-callback-user-email" placeholder="email@example.com" required>
+        </p>
+        <p>
+          <label for="appointment-callback-text">Текст письма:</label>
+          <textarea name="callback-text" id="appointment-callback-text" placeholder="В свободной форме" required></textarea>
+        </p>
+        <p>
+          <button type="submit" name="send-message" aria-label="Отправить сообщение">Отправить</button>
+        </p>
+      </form>
+    </div>
   </div>
 
   <!-- Всплывающая карта после нажатия -->
