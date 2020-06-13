@@ -21,12 +21,12 @@
         <a href="index.html" class="technomart-logo-header technomart-logo-header-catalog">
           <img src="img/common_img/logos/logo_technomart.svg" alt="Поиск" width="107" height="17">
         </a>
-        <div class="search">
-          <img src="img/common_img/icons/icon_search.svg" alt="Поиск" width="17" height="17">
-          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-            <input type="search" name="search" placeholder="Поиск">
-          </form>
-        </div>
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <input type="search" name="search" placeholder="Поиск">
+          <div class="search-form-image">
+            <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586 15.586 17l-3.542-3.542A7.465 7.465 0 017.5 15 7.5 7.5 0 1115 7.5c0 1.643-.542 3.24-1.542 4.544zM7.5 2A5.506 5.506 0 002 7.5 5.506 5.506 0 007.5 13c3.032 0 5.5-2.468 5.5-5.5C13 4.467 10.532 2 7.5 2z" fill="#fff"/></svg>
+          </div>
+        </form>
         <a href="#" class="marks">
           <img src="img/common_img/icons/icon_bookmark.svg" alt="Закладка" width="14" height="16">
           <span class="marks-name">Закладки:</span>
@@ -54,19 +54,19 @@
         <div class="authorization-on">
           <div class="authorization-on-top">
             <a href="#">
-              <img src="img/catalog_img/icons/icon_user.svg" alt="" width="20" height="18">
+              <svg width="20" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39C-.026 14.902 0 18 0 18h20s.025-3.099-2.119-3.834z" fill="#C5C5C5"/></svg>
               <span>Равшан Джамшутович</span>
             </a>
             <button type="button" name="button-account-exit">
-              <img src="img/catalog_img/icons/icon_logout.svg" alt="Выйти из личного кабинета" width="20" height="17">
+              <svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 8.5L11.125 0v6h-6v5h6v6L20 8.5z" fill="#C5C5C5"/><path d="M2.106 13.952V3.048c.018-.376.17-1.057 1.01-1.057h5.027V0H3.116C.938 0 .112 1.81.086 3.027v10.946C.113 15.189.939 17 3.117 17h5.027v-1.99H3.116c-.84 0-.992-.683-1.01-1.058z" fill="#C5C5C5"/></svg>
             </button>
           </div>
           <ul class="authorization-on-bottom">
-            <li><a href="#">Мои заказы</a>
-              <li>
-                <hr>
-              </li>
-              <li><a href="#">Личный кабинет</a></li>
+            <li><a href="#">Мои заказы</a></li>
+            <li><a href="#">Личный кабинет</a></li>
+            <li>
+              <hr>
+            </li>
           </ul>
         </div>
       </div>
@@ -94,7 +94,7 @@
     <h2 class="visually-hidden">Каталог продукции</h2>
     <div class="container">
       <!-- Информационная панель навигации по каталогу -->
-      <section class="catalog-interaktive">
+      <section class="catalog-interactive">
         <ul class="catalog-navigation">
           <li class="catalog-navigation-home">
             <a href="index.html">
@@ -135,12 +135,17 @@
               <fieldset class="filter-form-price">
                 <legend>Цена:</legend>
                 <div class="filter-form-price-range">
-                  <input type="range" name="range-price-bar-min" id="range-price-bar-min" min="0" max="30000" step="1" aria-label="Установка минимального значения">
-                  <input type="range" name="range-price-bar-max" id="range-price-in-max" min="0" max="30000" step="1" aria-label="Установка максимального значения">
-                </div>
-                <div class="filter-form-price-number">
-                  <input type="text" name="range-price-num-min" id="range-price-num-min" aria-label="Ввод минимального значения" value="0">
-                  <input type="text" name="range-price-num-max" id="range-price-num-max" aria-label="Ввод максимального значения" value="30000">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar" style="width: 72%; margin-left: 7%"></div>
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0" style="left: 7%"></div>
+                    <div class="toggle toggle-max" tabindex="0" style="left: 72%"></div>
+                  </div>
+                  <div class="price-controls">
+                    <input type="number" name="min-price" id="range-price-num-min" aria-label="Ввод минимального значения" value="0">
+                    <input type="number" name="max-price" id="range-price-num-max" aria-label="Ввод максимального значения" value="30000">
+                  </div>
                 </div>
               </fieldset>
               <fieldset class="filter-form-producer">
@@ -195,10 +200,10 @@
                   типу</button>
                 <button type="button" name="sort-form-function" class="button-sort-form" aria-label="Сортировать по функционалу ">По функционалу</button>
                 <button type="button" name="button-sort-ascending " class="button-sort-up-down" aria-label="Сортировать по возрастанию">
-                  <img src="img/catalog_img/icons/icon_up.svg" alt="Сортировать по возрастанию" width="11" height="10">
+                  <svg width="12" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M5.662 0l5.5 10h-11" fill="#C5C5C5"/></svg>
                 </button>
                 <button type="button" name="button-sort-descending" class="button-sort-up-down" aria-label="Сортировать по убыванию">
-                  <img src="img/catalog_img/icons/icon_down.svg" alt="Сортировать по убыванию" width="11" height="10">
+                  <svg width="12" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M5.662 10L.162 0h11" fill="#C5C5C5"/></svg>
                 </button>
               </form>
             </div>
@@ -380,8 +385,8 @@
       <div class="container">
         <h2>Пара слов о перфораторах</h2>
         <p>
-          Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,шуруповерта
-          и отбойного молотка.<br> В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+          Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
+          шуруповерта и отбойного молотка.<br> В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
         </p>
       </div>
     </article>

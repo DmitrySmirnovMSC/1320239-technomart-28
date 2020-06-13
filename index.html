@@ -19,12 +19,12 @@
       <h2 class="visually-hidden">Информационная панель сайта Техномарт</h2>
       <div class="container">
         <div class="technomart-logo-header"><img src="img/common_img/logos/logo_technomart.svg" alt="Поиск" width="107" height="17"></div>
-        <div class="search">
-          <img src="img/common_img/icons/icon_search.svg" alt="Поиск" width="17" height="17">
-          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-            <input type="search" name="search" placeholder="Поиск">
-          </form>
-        </div>
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <input type="search" name="search" placeholder="Поиск">
+          <div class="search-form-image">
+            <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586 15.586 17l-3.542-3.542A7.465 7.465 0 017.5 15 7.5 7.5 0 1115 7.5c0 1.643-.542 3.24-1.542 4.544zM7.5 2A5.506 5.506 0 002 7.5 5.506 5.506 0 007.5 13c3.032 0 5.5-2.468 5.5-5.5C13 4.467 10.532 2 7.5 2z" fill="#fff"/></svg>
+          </div>
+        </form>
         <a href="#" class="marks">
           <img src="img/common_img/icons/icon_bookmark.svg" alt="Закладка" width="14" height="16">
           <span class="marks-name">Закладки:</span>
@@ -51,7 +51,7 @@
         </div>
         <div class="authorization enter">
           <a href="#">
-            <img src="img/index_img/icons/icon_login.svg" alt="Войти" width="20" height="17">
+            <svg width="20" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M14.167 8.5L5.714 0v6H0v5h5.714v6l8.453-8.5z" fill="#C5C5C5"/><path d="M16.177 15.01H11.39V17h4.787c2.074 0 2.861-1.81 2.885-3.026V3.028C19.038 1.811 18.252 0 16.177 0H11.39v1.99h4.787c.8 0 .945.681.962 1.057v10.904c-.016.376-.163 1.059-.962 1.059z" fill="#C5C5C5"/></svg>
             <span>Войти</span>
           </a>
         </div>
@@ -88,14 +88,16 @@
       <h2 class="visually-hidden">Информация о проудкции</h2>
       <div class="container">
         <div class="slider">
-          <div class="slider-list-item">
-            <h3>Перфораторы</h3>
-            <p>Настоящие мужские игрушки</p>
-          </div>
-          <div class="slider-list-item">
-            <h3>Дрели</h3>
-            <p>Соседям на радость!</p>
-          </div>
+          <ul class="slider-list">
+            <li class="slider-list-item">
+              <h3>Перфораторы</h3>
+              <p>Настоящие мужские игрушки</p>
+            </li>
+            <li class="slider-list-item">
+              <h3>Дрели</h3>
+              <p>Соседям на радость!</p>
+            </li>
+          </ul>
           <button type="button" name="slide-back" class="button-slide-back">
             <img src="img/index_img/icons/icon_left.svg" alt="Пролистать назад" width="22" height="40">
           </button>
@@ -278,12 +280,12 @@
         </article>
         <article class="about-contacts">
           <h3>Контакты</h3>
-          <p>Вы можете забрать товар сами, заехав в наш офис</p>
+          <p>Вы можете забрать товар сами,<br>заехав в наш офис</p>
           <button type="button" name="map-click" class="map-click-before">
             <img src="img/index_img/pictures/map_little.png" alt="Расположение офиса на карте" width="300" height="158">
           </button>
           <!-- Всплывающая карта после нажатия размечена после футера -->
-          <a class="callback-click" href="#callback-block-modal">Заблудились? Напишите нам!</a>
+          <a class="callback-click" href="#callback-block-modal" id="callback-click=return">Заблудились? Напишите нам!</a>
           <!-- Всплывающая форма обратной связи размечена после футера -->
         </article>
       </div>
@@ -355,7 +357,7 @@
   <div class="callback-container" id="callback-block-modal">
     <div class="callback-block">
       <p class="callback-block-decoration"></p>
-      <a class="button-callback-close" href="#">
+      <a class="button-callback-close" href="#callback-click=return">
         <img src="img/common_img/icons/icon_close.svg" alt="Закрыть окно" width="21" height="21">
       </a>
       <form class="callback-form" action="https://echo.htmlacademy.ru" method="get">
