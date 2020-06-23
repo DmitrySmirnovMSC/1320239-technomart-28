@@ -967,7 +967,7 @@ img {
   background-color: var(--active-red);
 }
 
-.slider-list-item:nth-child(1) {
+.slider-list-item-first {
   /* Позиционирование */
   position: absolute;
   /* Блочная модель */
@@ -977,7 +977,7 @@ img {
   background-image: url(/img/index_img/pictures/worker_and_hammer.jpg);
 }
 
-.slider-list-item:nth-child(2) {
+.slider-list-item-two {
   /* Позиционирование */
   position: absolute;
   /* Блочная модель */
@@ -1009,41 +1009,71 @@ img {
   font-weight: normal;
 }
 
-button[class="button-slide-back"],
-button[class="button-slide-ahead"] {
+.slider input[type="radio"] {
+  /* Блочная модель */
+  display: none;
+}
+
+input[class="button-slide-back"],
+input[class="button-slide-ahead"] {
   /* Оформление */
-  background-color: transparent;
   border: 0;
 }
 
-button[class="button-slide-back"] img {
-  /* Блочная модель */
-  width: 22px;
-  height: 40px;
-}
-
-button[class="button-slide-ahead"] img {
-  /* Блочная модель */
-  width: 22px;
-  height: 40px;
-}
-
-button[class="button-slide-back"] {
+.slider label:first-of-type {
   /* Позиционирование */
   position: absolute;
+  z-index: 9999;
   top: 122px;
   left: 23px;
-  /* Блочная модель */
-  padding: 0;
+  /* Оформление */
+  cursor: pointer;
 }
 
-button[class="button-slide-ahead"] {
+.slider label:last-of-type {
   /* Позиционирование */
   position: absolute;
+  z-index: 9999;
   top: 122px;
   left: 574px;
+  /* Оформление */
+  cursor: pointer;
+}
+
+.slider label:first-of-type>img {
   /* Блочная модель */
-  padding: 0;
+  width: 22px;
+  height: 40px;
+}
+
+.slider label:last-of-type>img {
+  /* Блочная модель */
+  width: 22px;
+  height: 40px;
+}
+
+input[class="button-slide-back"]:hover,
+input[class="button-slide-back"]:focus,
+input[class="button-slide-ahead"]:hover,
+input[class="button-slide-ahead"]:focus {
+  /* Удаление браузерной обводки у кнопки */
+  outline: none;
+}
+
+input[class="button-slide-back"]::-moz-focus-inner,
+input[class="button-slide-ahead"]::-moz-focus-inner {
+  /* Удаление браузерной обводки у кнопки */
+  border: 0;
+}
+
+.slider input[type="radio"]:not(:checked)+div {
+  /* Блочная модель */
+  display: none;
+}
+
+.slider input[type="radio"]:checked+div {
+  /* Блочная модель */
+  display: inherit;
 }
 
 
@@ -1332,11 +1362,6 @@ button[class="button-slide-ahead"] {
   background-color: var(--basic-green);
   box-shadow: inset 0px -3px 0px var(--special-shadow-4);
   border-radius: 2px;
-}
-
-.popular-product-list-field-hover .buy-item:target {
-  /* Блочная модель */
-  display: inherit;
 }
 
 .popular-product-list-field-hover .buy-item img {
@@ -1697,6 +1722,7 @@ button[class="button-slide-ahead"] {
 }
 
 .services-bottom-decoration {
+  /* Позиционирование */
   position: relative;
 }
 
@@ -1959,11 +1985,6 @@ ul.transport-list li::before {
   height: 100%;
 }
 
-.about-contacts .map-click:target {
-  /* Блочная модель */
-  display: block;
-}
-
 .about-contacts .callback-click {
   /* Блочная модель */
   box-sizing: border-box;
@@ -1979,11 +2000,6 @@ ul.transport-list li::before {
   color: var(--basic-white);
   background-color: var(--basic-red);
   border: 0;
-}
-
-.about-contacts .callback-click:target {
-  /* Блочная модель */
-  display: block;
 }
 
 
@@ -2500,7 +2516,6 @@ ul.transport-list li::before {
 }
 
 .filter-form-power input[type="radio"]:hover:checked+label::before {
-  outline: 3px solid red;
   /* Новый контент (оформление радикнопки) */
   content: "\2022";
   /* Новый контент Блочная модель */
@@ -2925,11 +2940,6 @@ ul.transport-list li::before {
   background-color: var(--basic-green);
   box-shadow: inset 0px -3px 0px var(--special-shadow-4);
   border-radius: 2px;
-}
-
-.showing-list-field-hover .buy-item:target {
-  /* Блочная модель */
-  display: inherit;
 }
 
 .showing-list-field-hover .buy-item img {
@@ -3412,20 +3422,26 @@ ul.transport-list li::before {
   left: 50%;
   transform: translateX(-50%);
   /* Блочная модель */
-  display: none;
   width: 620px;
   min-height: 282px;
   /* Типографика */
   font-family: "Cuprum", Arial, sans-serif;
   /* Оформление */
   background-color: var(--basic-white);
+  /* Анимация */
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-name: buyItemFormAnimation;
 }
 
-.buy-item-form-container:target {
+.buy-item-form-container-close {
+  /* Блочная модель */
+  display: none;
+}
+
+.buy-item-form-container-open {
   /* Блочная модель */
   display: block;
-  /* Другие свойства */
-  pointer-events: auto;
 }
 
 .buy-item-form {
@@ -3496,12 +3512,6 @@ ul.transport-list li::before {
   margin-left: 81px;
 }
 
-button[name="button-buy-close"] img {
-  /* Блочная модель */
-  width: 21px;
-  height: 21px;
-}
-
 .buy-item-form-bottom {
   /* Блочная модель */
   min-height: 112px;
@@ -3549,6 +3559,17 @@ button[name="button-buy-close"] img {
   border: 0;
 }
 
+button[name="button-buy-continue"]:hover,
+button[name="button-buy-continue"]:focus {
+  /* Удаление браузерной обводки у кнопки */
+  outline: none;
+}
+
+button[name="button-buy-continue"]::-moz-focus-inner {
+  /* Удаление браузерной обводки у кнопки */
+  border: 0;
+}
+
 
 /* INDEX callback-block */
 
@@ -3559,7 +3580,6 @@ button[name="button-buy-close"] img {
   left: 50%;
   transform: translateX(-50%);
   /* Блочная модель */
-  display: none;
   width: 620px;
   height: 430px;
   /* Оформление */
@@ -3567,17 +3587,27 @@ button[name="button-buy-close"] img {
   box-shadow: 0px 4px 20px var(--special-shadow-3);
 }
 
+.callback-container-close {
+  /* Блочная модель */
+  display: none;
+}
+
+.callback-container-open {
+  /* Блочная модель */
+  display: block;
+  /* Анимация */
+  animation: callbackOpenAnimation 0.6s;
+}
+
+.callback-container-error {
+  /* Анимация */
+  animation: callbackErrorAnimation 0.3s;
+}
+
 .callback-block {
   /* Блочная модель Flex*/
   display: flex;
   flex-direction: column;
-}
-
-.callback-container:target {
-  /* Блочная модель */
-  display: block;
-  /* Другие свойства */
-  pointer-events: auto;
 }
 
 .callback-block-decoration {
@@ -3607,11 +3637,66 @@ button[name="button-buy-close"] img {
   border: 0;
 }
 
+.callback-block input[type="text"] {
+  /* Блочная модель */
+  box-sizing: border-box;
+  width: 220px;
+  height: 38px;
+  margin-top: 11px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  /* Оформление */
+  border: 2px solid var(--special-gray-dark);
+  border-radius: 2px;
+}
+
+.callback-block input[type="email"] {
+  /* Блочная модель */
+  box-sizing: border-box;
+  width: 220px;
+  height: 38px;
+  margin-top: 11px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  /* Оформление */
+  border: 2px solid var(--special-gray-dark);
+  border-radius: 2px;
+}
+
+.callback-form textarea {
+  /* Блочная модель */
+  box-sizing: border-box;
+  width: 460px;
+  height: 114px;
+  margin-top: 11px;
+  padding: 0;
+  padding-left: 12px;
+  padding-top: 6px;
+  /* Оформление */
+  border: 2px solid var(--special-gray-dark);
+  border-radius: 2px;
+}
+
+.callback-block input[type="text"]:hover,
+.callback-block input[type="email"]:hover,
+.callback-block input[type="text"]:focus,
+.callback-block input[type="email"]:focus,
+.callback-block textarea:hover,
+.callback-block textarea:focus {
+  /* Удаление браузерной обводки у кнопки */
+  outline: none;
+}
+
+.callback-block input[type="text"]::-moz-focus-inner,
+.callback-block input[type="email"]::-moz-focus-inner,
+.callback-block textarea::-moz-focus-inner {
+  /* Удаление браузерной обводки у кнопки */
+  border: 0;
+}
+
 .callback-block input[type="text"]::-moz-placeholder,
 .callback-block input[type="email"]::-moz-placeholder,
 .callback-block textarea::-moz-placeholder {
-  /* Блочная модель */
-  padding-left: 12px;
   /* Типографика */
   font-size: 13px;
   line-height: 24px;
@@ -3622,8 +3707,6 @@ button[name="button-buy-close"] img {
 .callback-block input[type="text"]::-webkit-input-placeholder,
 .callback-block input[type="email"]::-webkit-input-placeholder,
 .callback-block textarea::-webkit-input-placeholder {
-  /* Блочная модель */
-  padding-left: 12px;
   /* Типографика */
   font-size: 13px;
   line-height: 24px;
@@ -3634,8 +3717,6 @@ button[name="button-buy-close"] img {
 .callback-block input[type="text"]:-ms-input-placeholder,
 .callback-block input[type="email"]:-ms-input-placeholder,
 .callback-block textarea:-ms-input-placeholder {
-  /* Блочная модель */
-  padding-left: 12px;
   /* Типографика */
   font-size: 13px;
   line-height: 24px;
@@ -3646,8 +3727,6 @@ button[name="button-buy-close"] img {
 .callback-block input[type="text"]::-ms-input-placeholder,
 .callback-block input[type="email"]::-ms-input-placeholder,
 .callback-block textarea::-ms-input-placeholder {
-  /* Блочная модель */
-  padding-left: 12px;
   /* Типографика */
   font-size: 13px;
   line-height: 24px;
@@ -3658,8 +3737,6 @@ button[name="button-buy-close"] img {
 .callback-block input[type="text"]::placeholder,
 .callback-block input[type="email"]::placeholder,
 .callback-block textarea::placeholder {
-  /* Блочная модель */
-  padding-left: 12px;
   /* Типографика */
   font-size: 13px;
   line-height: 24px;
@@ -3686,19 +3763,6 @@ button[name="button-buy-close"] img {
   line-height: 24px;
   /* Оформление */
   color: var(--basic-black);
-}
-
-.callback-form textarea {
-  /* Блочная модель */
-  box-sizing: border-box;
-  width: 460px;
-  height: 114px;
-  margin-top: 11px;
-  padding: 0;
-  padding-top: 6px;
-  /* Оформление */
-  border: 2px solid var(--special-gray-dark);
-  border-radius: 2px;
 }
 
 .callback-form p:nth-child(1) {
@@ -3741,30 +3805,6 @@ button[name="button-buy-close"] img {
   grid-column: 1 / -1;
 }
 
-.callback-form input[type="text"] {
-  /* Блочная модель */
-  box-sizing: border-box;
-  width: 220px;
-  height: 38px;
-  margin-top: 11px;
-  padding: 0px 0px 4px 0px;
-  /* Оформление */
-  border: 2px solid var(--special-gray-dark);
-  border-radius: 2px;
-}
-
-.callback-form input[type="email"] {
-  /* Блочная модель */
-  box-sizing: border-box;
-  width: 220px;
-  height: 38px;
-  margin-top: 11px;
-  padding: 0px 0px 4px 0px;
-  /* Оформление */
-  border: 2px solid var(--special-gray-dark);
-  border-radius: 2px;
-}
-
 .callback-form p:last-child {
   /* Оформление */
   background-color: var(--special-gray-5light);
@@ -3790,6 +3830,22 @@ button[name="button-buy-close"] img {
   border: 0;
 }
 
+.callback-form button[name="send-message"]:hover,
+.callback-form button[name="send-message"]:focus {
+  /* Удаление браузерной обводки у кнопки */
+  outline: none;
+}
+
+.callback-form button[name="send-message"]::-moz-focus-inner {
+  /* Удаление браузерной обводки у кнопки */
+  border: 0;
+}
+
+.callback-form button[name="send-message"]:active {
+  /* Оформление */
+  background-color: var(--active-red);
+}
+
 
 /* INDEX .map-click-after */
 
@@ -3800,11 +3856,22 @@ button[name="button-buy-close"] img {
   left: 50%;
   transform: translateX(-50%);
   /* Блочная модель */
-  display: none;
   width: 943px;
   height: 449px;
   /* Оформление */
   box-shadow: 0px 4px 20px var(--special-shadow-3);
+}
+
+.mapclick-close {
+  /* Блочная модель */
+  display: none;
+}
+
+.mapclick-open {
+  /* Блочная модель */
+  display: block;
+  /* Анимация */
+  animation: mapclickOpenAnimation 0.6s;
 }
 
 .map-click-decoration-and-close {
@@ -3815,13 +3882,6 @@ button[name="button-buy-close"] img {
 .map-click-after iframe {
   /* Оформление */
   border: none;
-}
-
-.map-click-after:target {
-  /* Блочная модель */
-  display: block;
-  /* Другие свойства */
-  pointer-events: auto;
 }
 
 .map-block-decoration {
@@ -3843,4 +3903,59 @@ button[name="button-buy-close"] img {
   z-index: 9999;
   /* Блочная модель */
   display: block;
+}
+
+@keyframes callbackOpenAnimation {
+  0% {
+    transform: translateY(-2000px) translateX(-50%);
+  }
+  70% {
+    transform: translateY(30px) translateX(-50%);
+  }
+  90% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+@keyframes buyItemFormAnimation {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, 0px, 100px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes callbackErrorAnimation {
+  0%,
+  100% {
+    transform: translateX(-50%);
+  }
+  20%,
+  60% {
+    transform: translateX(-49%);
+  }
+  40%,
+  80% {
+    transform: translateX(-51%);
+  }
+}
+
+@keyframes mapclickOpenAnimation {
+  0% {
+    transform: translateY(2000px) translateX(-50%);
+  }
+  70% {
+    transform: translateY(-30px) translateX(-50%);
+  }
+  90% {
+    transform: translateY(10px) translateX(-50%);
+  }
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
 }

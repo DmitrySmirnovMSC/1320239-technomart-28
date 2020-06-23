@@ -15,7 +15,6 @@
   <header class="main-header">
     <!-- Верхняя секция шапки -->
     <section class="main-header-top">
-      <!-- Заголовок скрыт -->
       <h2 class="visually-hidden">Информационная панель сайта Техномарт</h2>
       <div class="container">
         <div class="technomart-logo-header"><img src="img/common_img/logos/logo_technomart.svg" alt="Поиск" width="107" height="17"></div>
@@ -62,7 +61,6 @@
     </section>
     <!-- Нижняя секция шапки -->
     <section class="main-header-bottom">
-      <!-- Заголовок скрыт -->
       <h2 class="visually-hidden">Навигационное меню сайта Техномарт</h2>
       <nav class="main-navigation container">
         <ul>
@@ -80,30 +78,24 @@
 
   <!-- Основное содержание -->
   <main class="main-index">
-    <!-- заголовок скрыт -->
     <h2 class="visually-hidden">О компании, продукция, сервисы и доставка</h2>
     <!-- Главная секция Продукция, скидки и доставка -->
     <section class="product-info">
-      <!-- заголовок скрыт -->
       <h2 class="visually-hidden">Информация о проудкции</h2>
       <div class="container">
         <div class="slider">
-          <ul class="slider-list">
-            <li class="slider-list-item">
-              <h3>Перфораторы</h3>
-              <p>Настоящие мужские игрушки</p>
-            </li>
-            <li class="slider-list-item">
-              <h3>Дрели</h3>
-              <p>Соседям на радость!</p>
-            </li>
-          </ul>
-          <button type="button" name="slide-back" class="button-slide-back">
-            <img src="img/index_img/icons/icon_left.svg" alt="Пролистать назад" width="22" height="40">
-          </button>
-          <button type="button" name="slide-ahead" class="button-slide-ahead">
-            <img src="img/index_img/icons/icon_right.svg" alt="Пролистать вперед" width="22" height="40">
-          </button>
+          <label for="button-slide-back-ident"><img src="img/index_img/icons/icon_left.svg" alt="Пролистать назад" width="22" height="40"></label>
+          <input type="radio" name="slider-listening" class="button-slide-back" id="button-slide-back-ident" checked>
+          <div class="slider-list-item slider-list-item-first">
+            <h3>Перфораторы</h3>
+            <p>Настоящие мужские игрушки</p>
+          </div>
+          <label for="button-slide-ahead-ident"><img src="img/index_img/icons/icon_right.svg" alt="Пролистать вперед" width="22" height="40"></label>
+          <input type="radio" name="slider-listening" class="button-slide-ahead" id="button-slide-ahead-ident">
+          <div class="slider-list-item slider-list-item-two">
+            <h3>Дрели</h3>
+            <p>Соседям на радость!</p>
+          </div>
           <a href="catalog.html">Открыть каталог</a>
         </div>
         <div class="product-info-item material">
@@ -146,7 +138,7 @@
               <img src="img/common_img/pictures/bosch_bfg_9000.jpg" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
             </div>
             <div class="popular-product-list-field-hover">
-              <a href="#buy-item-form-modal" class="buy-item">
+              <a href="#" class="buy-item" onclick="buyItemModalOpen(event)">
                 <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
                 <span>Купить</span>
               </a>
@@ -161,7 +153,7 @@
               <img src="img/common_img/pictures/bosch_bfg_3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
             </div>
             <div class="popular-product-list-field-hover">
-              <a href="#buy-item-form-modal" class="buy-item">
+              <a href="#" class="buy-item" onclick="buyItemModalOpen(event)">
                 <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
                 <span>Купить</span>
               </a>
@@ -176,7 +168,7 @@
               <img src="img/common_img/pictures/bosch_bfg_6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
             </div>
             <div class="popular-product-list-field-hover">
-              <a href="#buy-item-form-modal" class="buy-item">
+              <a href="#" class="buy-item" onclick="buyItemModalOpen(event)">
                 <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
                 <span>Купить</span>
               </a>
@@ -191,7 +183,7 @@
               <img src="img/common_img/pictures/bosch_bfg_2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
             </div>
             <div class="popular-product-list-field-hover">
-              <a href="#buy-item-form-modal" class="buy-item">
+              <a href="#" class="buy-item" onclick="buyItemModalOpen(event)">
                 <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
                 <span>Купить</span>
               </a>
@@ -296,7 +288,6 @@
     </section>
     <!-- Секция О компании -->
     <section class="about">
-      <!-- заголовок скрыт -->
       <h2 class="visually-hidden">Информации о компании и контакты</h2>
       <div class="container">
         <article class="about-info">
@@ -316,12 +307,10 @@
         <article class="about-contacts">
           <h3>Контакты</h3>
           <p>Вы можете забрать товар сами,<br>заехав в наш офис</p>
-          <a class="map-click" href="#map-click-after-modal">
+          <a class="map-click" href="#" onclick="mapclickModalOpen(event)">
             <img src="img/index_img/pictures/map_little.png" alt="Расположение офиса на карте" width="300" height="158">
           </a>
-          <!-- Всплывающая карта после нажатия размечена после футера -->
-          <a class="callback-click" href="#callback-block-modal" id="callback-click-return">Заблудились? Напишите нам!</a>
-          <!-- Всплывающая форма обратной связи размечена после футера -->
+          <a class="callback-click" href="#" onclick="callbackModalOpen(event)">Заблудились? Напишите нам!</a>
         </article>
       </div>
     </section>
@@ -332,7 +321,6 @@
     <!-- Верхняя секция подвала -->
     <section class="main-footer-top">
       <div class="container">
-        <!-- Заголовок скрыт -->
         <h2 class="visually-hidden">Адрес компании и навигационная панель сайта Техномарт</h2>
         <div class="logo-techno-footer">
           <img src="img/common_img/logos/logo_technomart.svg" alt="Логотип Техномарт" width="138" height="23">
@@ -363,7 +351,6 @@
     <!-- Нижняя секция подвала -->
     <section class="main-footer-bottom">
       <div class="container">
-        <!-- Заголовок скрыт -->
         <h2 class="visually-hidden">Обратная связь с нами, ссылки на социальные сети</h2>
         <div class="copyright">
           <p>© 2010–2019 Компания «Техномарт»</p>
@@ -393,24 +380,24 @@
   </footer>
 
   <!-- Модальное окно Обратная связь -->
-  <div class="callback-container" id="callback-block-modal">
+  <div class="callback-container callback-container-close">
     <div class="callback-block">
       <p class="callback-block-decoration"></p>
-      <a class="button-callback-close" href="#close">
+      <a class="button-callback-close" href="#" onclick="callbackModalClose(event)">
         <img src="img/common_img/icons/icon_close.svg" alt="Закрыть окно" width="21" height="21">
       </a>
-      <form class="callback-form" action="https://echo.htmlacademy.ru" method="get">
+      <form class="callback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label for="appointment-callback-user-name">Ваше имя:</label>
-          <input type="text" name="callback-user-name" id="appointment-callback-user-name" placeholder="Имя Фамилия" required>
+          <input type="text" name="callback-user-name" id="appointment-callback-user-name" placeholder="Имя Фамилия">
         </p>
         <p>
           <label for="appointment-callback-user-email">Ваш e-mail:</label>
-          <input type="email" name="callback-user-email" id="appointment-callback-user-email" placeholder="email@example.com" required>
+          <input type="email" name="callback-user-email" id="appointment-callback-user-email" placeholder="email@example.com">
         </p>
         <p>
           <label for="appointment-callback-text">Текст письма:</label>
-          <textarea name="callback-text" id="appointment-callback-text" placeholder="В свободной форме" required></textarea>
+          <textarea name="callback-text" id="appointment-callback-text" placeholder="В свободной форме"></textarea>
         </p>
         <p>
           <button type="submit" name="send-message" aria-label="Отправить сообщение">Отправить</button>
@@ -420,10 +407,10 @@
   </div>
 
   <!-- Модальное окно Карта -->
-  <div class="map-click-after" id="map-click-after-modal">
+  <div class="map-click-after mapclick-close">
     <div class="map-click-decoration-and-close">
       <p class="map-block-decoration"></p>
-      <a class="button-map-close" href="#close">
+      <a class="button-map-close" href="#" onclick="mapclickModalClose(event)">
         <img src="img/common_img/icons/icon_close.svg" alt="Закрыть окно" width="21" height="21">
       </a>
     </div>
@@ -431,7 +418,7 @@
   </div>
 
   <!-- Модальное окно Оформить заказ -->
-  <div class="buy-item-form-container" id="buy-item-form-modal">
+  <div class="buy-item-form-container buy-item-form-container-close">
     <div class="buy-item-form">
       <div class="buy-item-form-top">
         <p class="buy-item-form-top-decoration"></p>
@@ -439,7 +426,7 @@
           <img src="img/catalog_img/icons/icon_cart_in.svg" alt="" width="66" height="66">
           <span>Товар добавлен в корзину!</span>
         </p>
-        <a class="button-buy-close" href="#close">
+        <a class="button-buy-close" href="#" onclick="buyItemModalClose(event)">
           <img src="img/common_img/icons/icon_close.svg" alt="Закрыть окно" width="21" height="21">
         </a>
       </div>
@@ -450,6 +437,9 @@
     </div>
   </div>
 
+  <script src="js/buyitemmodal.js"></script>
+  <script src="js/callbackmodal.js"></script>
+  <script src="js/mapclickmodal.js"></script>
 </body>
 
 </html>
