@@ -6,7 +6,7 @@ let callbackText = callbackModal.querySelector("textarea");
 
 let isStorageSupport = true;
 let storageName = "";
-let = "";
+let storageEmail = "";
 
 try {
   storageName = localStorage.getItem("name");
