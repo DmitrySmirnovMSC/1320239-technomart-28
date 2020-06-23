@@ -29,12 +29,12 @@
         <a href="#" class="marks">
           <img src="img/common_img/icons/icon_bookmark.svg" alt="Закладка" width="14" height="16">
           <span class="marks-name">Закладки:</span>
-          <span class="marks-count">0</span>
+          <span class="marks-count" id="marks-count-ident">0</span>
         </a>
-        <a href="#" class="cart cart-catalog">
+        <a href="#" class="cart">
           <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
           <span class="cart-name">Корзина:</span>
-          <span class="cart-count">10</span>
+          <span class="cart-count" id="cart-count-ident">0</span>
         </a>
         <a href="#" class="order">Оформить заказ</a>
       </div>
@@ -216,7 +216,7 @@
                       <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
                       <span>Купить</span>
                     </a>
-                    <button type="button" name="mark-in-item">В закладки</button>
+                    <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
                   </div>
                   <p>Перфоратор BOSCH<br>BFG 6000</p>
                   <p>30500 Р.</p>
@@ -232,7 +232,7 @@
                       <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
                       <span>Купить</span>
                     </a>
-                    <button type="button" name="mark-in-item">В закладки</button>
+                    <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
                   </div>
                   <p>Перфоратор BOSCH<br>BFG 6000</p>
                   <p>30500 Р.</p>
@@ -248,7 +248,7 @@
                       <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
                       <span>Купить</span>
                     </a>
-                    <button type="button" name="mark-in-item">В закладки</button>
+                    <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
                   </div>
                   <p>Перфоратор BOSCH<br>BFG 6000</p>
                   <p>30500 Р.</p>
@@ -264,7 +264,7 @@
                       <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
                       <span>Купить</span>
                     </a>
-                    <button type="button" name="mark-in-item">В закладки</button>
+                    <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
                   </div>
                   <p>Перфоратор BOSCH<br>BFG 3000</p>
                   <p>22500 Р.</p>
@@ -280,7 +280,7 @@
                       <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
                       <span>Купить</span>
                     </a>
-                    <button type="button" name="mark-in-item">В закладки</button>
+                    <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
                   </div>
                   <p>Перфоратор BOSCH<br>BFG 6000</p>
                   <p>30500 Р.</p>
@@ -296,7 +296,7 @@
                       <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
                       <span>Купить</span>
                     </a>
-                    <button type="button" name="mark-in-item">В закладки</button>
+                    <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
                   </div>
                   <p>Перфоратор BOSCH<br>BFG 2000</p>
                   <p>NO PRICE</p>
@@ -312,7 +312,7 @@
                       <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
                       <span>Купить</span>
                     </a>
-                    <button type="button" name="mark-in-item">В закладки</button>
+                    <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
                   </div>
                   <p>Перфоратор BOSCH<br>BFG 3000</p>
                   <p>22500 Р.</p>
@@ -328,7 +328,7 @@
                       <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
                       <span>Купить</span>
                     </a>
-                    <button type="button" name="mark-in-item">В закладки</button>
+                    <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
                   </div>
                   <p>Перфоратор BOSCH<br>BFG 6000</p>
                   <p>30500 Р.</p>
@@ -344,7 +344,7 @@
                       <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
                       <span>Купить</span>
                     </a>
-                    <button type="button" name="mark-in-item">В закладки</button>
+                    <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
                   </div>
                   <p>Перфоратор BOSCH<br>BFG 2000</p>
                   <p>NO PRICE</p>
@@ -459,7 +459,7 @@
     </div>
   </div>
 
-  <script src="js/buyitemmodal.js"></script>
+  <script src="js/buyitemhover.js"></script>
 
 </body>
 

@@ -269,6 +269,11 @@ img {
   background-color: transparent;
 }
 
+.main-header-top .marks-red {
+  /* Оформление */
+  background-color: var(--basic-red);
+}
+
 .marks img {
   /* Блочная модель */
   margin-top: 13px;
@@ -320,12 +325,12 @@ img {
   opacity: 0.3;
 }
 
-.main-header-top .cart-index {
+.main-header-top .cart {
   /* Оформление */
   background-color: transparent;
 }
 
-.main-header-top .cart-catalog {
+.main-header-top .cart-red {
   /* Оформление */
   background-color: var(--basic-red);
 }
@@ -899,7 +904,7 @@ img {
 .product-info div.material {
   /* Оформление */
   background-color: var(--special-orange);
-  background-image: url(/img/common_img/decorations/sticker_new.svg);
+  background-image: url("../img/common_img/decorations/sticker_new.svg");
   background-position: top right;
   background-repeat: no-repeat;
 }
@@ -974,7 +979,7 @@ img {
   width: 100%;
   height: 100%;
   /* Оформление */
-  background-image: url(/img/index_img/pictures/worker_and_hammer.jpg);
+  background-image: url("../img/index_img/pictures/worker_and_hammer.jpg");
 }
 
 .slider-list-item-two {
@@ -985,7 +990,7 @@ img {
   width: 100%;
   height: 100%;
   /* Оформление */
-  background-image: url(/img/index_img/pictures/worker_and_drill.jpg);
+  background-image: url("../img/index_img/pictures/worker_and_drill.jpg");
 }
 
 .slider-list-item h3 {
@@ -1236,7 +1241,7 @@ input[class="button-slide-ahead"]::-moz-focus-inner {
 .popular-product-list-item:nth-child(2),
 .popular-product-list-item:nth-child(4) {
   /* Оформление */
-  background-image: url(/img/common_img/decorations/sticker_new.svg);
+  background-image: url("../img/common_img/decorations/sticker_new.svg");
   background-position: top right;
   background-repeat: no-repeat;
 }
@@ -1732,7 +1737,7 @@ input[class="button-slide-ahead"]::-moz-focus-inner {
   top: -45px;
   left: 230.5px;
   /* Новый контент */
-  content: url(img/index_img/decorations/line-shadow.svg);
+  content: url("..img/index_img/decorations/line-shadow.svg");
 }
 
 .services-menu-info {
@@ -1806,14 +1811,14 @@ input[class="button-slide-ahead"]::-moz-focus-inner {
 
 .services-menu-info-delivery {
   /* Оформление */
-  background-image: url(/img/index_img/icons/icon_lorry.png);
+  background-image: url("../img/index_img/icons/icon_lorry.png");
   background-repeat: no-repeat;
   background-position: bottom right;
 }
 
 .services-menu-info-guarantee {
   /* Оформление */
-  background-image: url(/img/index_img/icons/icon_guarantee.png);
+  background-image: url("../img/index_img/icons/icon_guarantee.png");
   background-repeat: no-repeat;
   background-position: bottom right;
   display: none;
@@ -1821,7 +1826,7 @@ input[class="button-slide-ahead"]::-moz-focus-inner {
 
 .services-menu-info-credit {
   /* Оформление */
-  background-image: url(/img/index_img/icons/icon_credit.png);
+  background-image: url("../img/index_img/icons/icon_credit.png");
   background-repeat: no-repeat;
   background-position: bottom right;
   display: none;
@@ -2773,7 +2778,7 @@ ul.transport-list li::before {
 .showing-list-item:nth-child(7),
 .showing-list-item:nth-child(9) {
   /* Оформление */
-  background-image: url(/img/common_img/decorations/sticker_new.svg);
+  background-image: url("../img/common_img/decorations/sticker_new.svg");
   background-position: top right;
   background-repeat: no-repeat;
 }
