@@ -6,7 +6,7 @@
   <title>Техномарт</title>
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="css/normalize_min.css" rel="stylesheet">
-  <link href="css/style_ap_min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -19,7 +19,8 @@
       <div class="container">
         <div class="technomart-logo-header"><img src="img/common_img/logos/logo_technomart.svg" alt="Поиск" width="107" height="17"></div>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-          <input type="search" name="search" placeholder="Поиск">
+          <label for="search-input" class="visually-hidden">Поиск</label>
+          <input type="search" name="search" id="search-input" placeholder="Поиск">
           <div class="search-form-image">
             <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586 15.586 17l-3.542-3.542A7.465 7.465 0 017.5 15 7.5 7.5 0 1115 7.5c0 1.643-.542 3.24-1.542 4.544zM7.5 2A5.506 5.506 0 002 7.5 5.506 5.506 0 007.5 13c3.032 0 5.5-2.468 5.5-5.5C13 4.467 10.532 2 7.5 2z" fill="#fff"/></svg>
           </div>
@@ -90,13 +91,16 @@
             <h3>Перфораторы</h3>
             <p>Настоящие мужские игрушки</p>
           </div>
+          <div class="decoration-points-red-one"></div>
           <label for="button-slide-ahead-ident"><img src="img/index_img/icons/icon_right.svg" alt="Пролистать вперед" width="22" height="40"></label>
           <input type="radio" name="slider-listening" class="button-slide-ahead" id="button-slide-ahead-ident">
           <div class="slider-list-item slider-list-item-two">
             <h3>Дрели</h3>
             <p>Соседям на радость!</p>
           </div>
+          <div class="decoration-points-red-one"></div>
           <a href="catalog.html">Открыть каталог</a>
+          <div class="decoration-points-white"></div>
         </div>
         <div class="product-info-item material">
           <h3>Материалы</h3>
@@ -134,60 +138,68 @@
         </div>
         <ul class="popular-product-list">
           <li class="popular-product-list-item">
-            <div class="popular-product-list-field">
-              <img src="img/common_img/pictures/bosch_bfg_9000.jpg" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
-            </div>
-            <div class="popular-product-list-field-hover">
-              <a href="#" class="buy-item" onclick="buyItemModalOpen(event)">
-                <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
-                <span>Купить</span>
-              </a>
-              <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
+            <div class="popular-product-list-changing">
+              <div class="popular-product-list-field">
+                <img src="img/common_img/pictures/bosch_bfg_9000.jpg" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
+              </div>
+              <div class="popular-product-list-field-hover">
+                <a href="#" class="buy-item" onclick="buyItemModalOpen(event)">
+                  <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
+                  <span>Купить</span>
+                </a>
+                <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
+              </div>
             </div>
             <p>Перфоратор BOSCH<br> BFG 9000</p>
             <p>32500 Р.</p>
             <a href="#">25500 Р.</a>
           </li>
           <li class="popular-product-list-item">
-            <div class="popular-product-list-field">
-              <img src="img/common_img/pictures/bosch_bfg_3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
-            </div>
-            <div class="popular-product-list-field-hover">
-              <a href="#" class="buy-item" onclick="buyItemModalOpen(event)">
-                <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
-                <span>Купить</span>
-              </a>
-              <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
+            <div class="popular-product-list-changing">
+              <div class="popular-product-list-field">
+                <img src="img/common_img/pictures/bosch_bfg_3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
+              </div>
+              <div class="popular-product-list-field-hover">
+                <a href="#" class="buy-item" onclick="buyItemModalOpen(event)">
+                  <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
+                  <span>Купить</span>
+                </a>
+                <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
+              </div>
             </div>
             <p>Перфоратор BOSCH<br> BFG 3000</p>
             <p>22500 Р.</p>
             <a href="#">15500 Р.</a>
           </li>
           <li class="popular-product-list-item">
-            <div class="popular-product-list-field">
-              <img src="img/common_img/pictures/bosch_bfg_6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
-            </div>
-            <div class="popular-product-list-field-hover">
-              <a href="#" class="buy-item" onclick="buyItemModalOpen(event)">
-                <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
-                <span>Купить</span>
-              </a>
-              <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
+            <div class="popular-product-list-changing">
+              <div class="popular-product-list-field">
+                <img src="img/common_img/pictures/bosch_bfg_6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
+              </div>
+              <div class="popular-product-list-field-hover">
+                <a href="#" class="buy-item" onclick="buyItemModalOpen(event)">
+                  <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
+                  <span>Купить</span>
+                </a>
+                <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
+              </div>
             </div>
             <p>Перфоратор BOSCH<br> BFG 6000</p>
             <p>30500 Р.</p>
             <a href="#">25500 Р.</a>
           </li>
           <li class="popular-product-list-item">
-            <div class="popular-product-list-field">
-              <img src="img/common_img/pictures/bosch_bfg_2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
-            </div>
-            <div class="popular-product-list-field-hover">
-              <a href="#" class="buy-item" onclick="buyItemModalOpen(event)">
-                <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
-                <span>Купить</span>
-              </a>
-              <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
+            <div class="popular-product-list-changing">
+              <div class="popular-product-list-field">
+                <img src="img/common_img/pictures/bosch_bfg_2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
+              </div>
+              <div class="popular-product-list-field-hover">
+                <a href="#" class="buy-item" onclick="buyItemModalOpen(event)">
+                  <img src="img/common_img/icons/icon_cart.svg" alt="Корзина" width="15" height="15">
+                  <span>Купить</span>
+                </a>
+                <button type="button" name="mark-in-item" onclick="markIn()">В закладки</button>
+              </div>
             </div>
             <p>Перфоратор BOSCH<br> BFG 2000</p>
             <p>NO PRICE</p>
@@ -257,7 +269,7 @@
         <div class="services-bottom">
           <div class="services-bottom-decoration"></div>
           <div class="services-menu services-menu-delivery">
-            <input type="radio" name="services-men-item" id="services-menu-delivery-btn" checked>
+            <input type="radio" name="services-menu-item" id="services-menu-delivery-btn" checked>
             <label for="services-menu-delivery-btn">Доставка</label>
             <div class="services-menu-info services-menu-info-delivery">
               <h3>Доставка</h3>
@@ -265,7 +277,7 @@
             </div>
           </div>
           <div class="services-menu services-menu-guarantee">
-            <input type="radio" name="services-men-item" id="services-menu-guarantee-btn">
+            <input type="radio" name="services-menu-item" id="services-menu-guarantee-btn">
             <label for="services-menu-guarantee-btn">Гарантия</label>
             <div class="services-menu-info services-menu-info-guarantee">
               <h3>Гарантия</h3>
@@ -275,7 +287,7 @@
             </div>
           </div>
           <div class="services-menu services-menu-credit">
-            <input type="radio" name="services-men-item" id="services-menu-credit-btn">
+            <input type="radio" name="services-menu-item" id="services-menu-credit-btn">
             <label for="services-menu-credit-btn">Кредит</label>
             <div class="services-menu-info services-menu-info-credit">
               <h3>Кредит</h3>
@@ -373,7 +385,7 @@
         </div>
         <div class="owner">
           <p>Разработано -</p>
-          <a href="mailto:mail@htmlacademy.ru">htmlacademy.ru</a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </div>
       </div>
     </section>
